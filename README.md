@@ -23,14 +23,20 @@ const password = '...';
 const apiKey = '...';
 const apiSecret = '...';
 
+const token = '...';
+
 (async () => {
   try {
+    // Авторизация по логину, паролю и ключу приложения
     await zenmoneyApi.authorize({
       username,
       password,
       apiKey,
       apiSecret,
     });
+
+    // Авторизация по токену
+    await zenmoneyApi.authorize(token);
 
     const diff = await zenmoneyApi.diff({
       // fetch prev two months
