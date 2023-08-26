@@ -36,7 +36,7 @@ const token = '...';
     });
 
     // Авторизация по токену
-    await zenmoneyApi.authorize(token);
+    await zenmoneyApi.authorizeByToken(token);
 
     const diff = await zenmoneyApi.diff({
       // fetch prev two months
