@@ -27,7 +27,7 @@ const token = '...';
 
 (async () => {
   try {
-    // Авторизация по логину, паролю и ключу приложения
+    // authorize by username, password and api keys
     await zenmoneyApi.authorize({
       username,
       password,
@@ -35,7 +35,7 @@ const token = '...';
       apiSecret,
     });
 
-    // Авторизация по токену
+    // OR: authorize by token
     await zenmoneyApi.authorizeByToken(token);
 
     const diff = await zenmoneyApi.diff({
