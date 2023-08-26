@@ -26,6 +26,10 @@ class ZenmoneyApi {
     this.setToken(token);
   }
 
+  async authorizeByToken(token: string) {
+    this.setToken(token);
+  }
+
   async diff({
     currentClientTimestamp = unixNow(),
     serverTimestamp = 0,
