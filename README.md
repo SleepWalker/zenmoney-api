@@ -25,6 +25,8 @@ const apiSecret = '...';
 
 (async () => {
   try {
+    // you can also use `zenmoneyApi.setToken('token')`
+    // if you already have one
     await zenmoneyApi.authorize({
       username,
       password,

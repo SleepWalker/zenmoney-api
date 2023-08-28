@@ -12,11 +12,11 @@ export interface ApiAuthData {
 }
 
 class ZenmoneyApi {
-  private async getToken(authData: ApiAuthData) {
+  async getToken(authData: ApiAuthData) {
     return auth.getToken(authData);
   }
 
-  private setToken(token: string) {
+  setToken(token: string) {
     setToken(token);
   }
 
