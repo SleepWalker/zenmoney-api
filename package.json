@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "yarn ci:check && yarn build",
+    "prepublish": "npm run ci:check && npm run build",
     "postversion": "git push origin HEAD --no-verify --tags",
     "build": "rm -fr ./dist && tsc -d --declaration --noEmit false --outDir ./dist",
     "test": "jest",
@@ -29,12 +29,12 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
     "ts:check": "tsc",
-    "ci:check": "yarn lint:check && yarn ts:check && yarn test"
+    "ci:check": "npm run lint:check && npm run ts:check && npm run test"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn ci:check"
+      "pre-push": "npm run ci:check"
     }
   },
   "lint-staged": {
