@@ -1,19 +1,19 @@
 A nodejs implementation of zenmoney api:
 https://github.com/zenmoney/ZenPlugins/wiki/ZenMoney-API
 
-## Установка
+## Installation
 
 ```bash
 npm install zenmoney-api
 ```
 
-или
+or
 
 ```bash
 yarn add zenmoney-api
 ```
 
-## Пример использования
+## Usage example
 
 ```js
 import { zenmoneyApi } from 'zenmoney-api';
@@ -70,6 +70,6 @@ const apiSecret = '...';
 
 ## TODO
 
-- возможность авторизации через oauth
-- проверка времени жизни токена, автоматическое обновление токена
-- обработка ошибок api
+- support oauth authentication
+- automatic token invalidation and update
+- improve api error checking
